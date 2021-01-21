@@ -15,13 +15,10 @@ export class BooksComponent implements OnInit,AfterViewInit {
 
   constructor(private bookservice: BooksService,private route:ActivatedRoute) { }
 
-  ngOnInit(): void {
-this.route.paramMap.pipe(
-      map((param: ParamMap)=>{
+  ngOnInit(): void {this.route.paramMap.pipe(map((param: ParamMap)=>{
          // @ts-ignore
         return param.params.id;
-      })
-).subscribe(bookid=>{
+      })).subscribe(bookid=>{
   this.id=bookid;
   this.bookservice.getSinglebook(this.id).subscribe(book=>{
     this.books=book;

@@ -361,7 +361,7 @@ textarea.input {
 \*----------------------------*/
 
 #breadcrumb {
-  padding: 30px 0px;
+  padding: 2px 0px;
   background: #FBFBFC;
   border-bottom: 1px solid #E4E7ED;
   margin-bottom: 30px;
@@ -416,7 +416,7 @@ textarea.input {
 #top-header {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #1E1F29;
+  background-color: #000000;
 }
 
 .header-links li {
@@ -449,7 +449,7 @@ textarea.input {
 #header {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #15161D;
+  background-color: #000000;
 }
 
 .header-logo {
@@ -469,7 +469,7 @@ textarea.input {
 }
 
 .header-search form {
-  position: relative;
+  position: center;
 }
 
 .header-search form .input-select {
@@ -483,13 +483,13 @@ textarea.input {
 }
 
 .header-search form .search-btn {
-  height: 40px;
+  height: 42px;
   width: 100px;
   background: #525151;
   color: #FFF;
   font-weight: 700;
   border: none;
-  border-radius: 0px 40px 40px 0px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 /*----------------------------*\
@@ -623,9 +623,9 @@ textarea.input {
 ===========================================================*/
 
 #navigation {
-  background: rgb(172, 173, 173);
+  background: rgb(82, 81, 81);
   border-bottom: 2px solid #050505;
-  border-top: 3px solid #ffffff;
+  border-top: 3px solid #000000;
 }
 
 /*----------------------------*\
@@ -800,7 +800,7 @@ textarea.input {
 
 .hot-deal {
   text-align: center;
-  
+
 }
 
 /*=========================================================
@@ -1425,12 +1425,12 @@ textarea.input {
 	Product details
 \*----------------------------*/
 .dscription{
-  color: #FFF;
+  color: #525151;
 }
 .product-details .product-name {
   text-transform: uppercase;
   font-size: 24px;
-  color: firebrick;
+  color: #ffffff;
 }
 
 .product-details .product-rating {
@@ -1439,11 +1439,11 @@ textarea.input {
 }
 
 .product-details .product-rating>i {
-  color: #E4E7ED;
+  color: #525151;
 }
 
 .product-details .product-rating>i.fa-star {
-  color: #ffffff;
+  color: #525151;
 }
 
 .product-details .review-link {
@@ -1455,7 +1455,7 @@ textarea.input {
   font-size: 12px;
   margin-top: 10px;
   margin-bottom: 15px;
-  color: #D10024;
+  color: #ffffff;
 }
 /*
 .product-details .product-price .product-old-price {
@@ -1882,8 +1882,8 @@ textarea.input {
 ===========================================================*/
 
 #newsletter.section {
-  border-top: 2px solid #E4E7ED;
-  border-bottom: 3px solid #D10024;
+  border-top: 2px solid #000000;
+  border-bottom: 3px solid #000000;
   margin-top: 30px;
 }
 
@@ -1967,12 +1967,12 @@ textarea.input {
 ===========================================================*/
 
 #footer {
-  background: #15161D;
-  color: #B9BABC;
+  background: #000000;
+  color: #000000;
 }
 
 #bottom-footer {
-  background: #1E1F29;
+  background: #000000;
 }
 
 .footer {
@@ -1980,9 +1980,9 @@ textarea.input {
 }
 
 .footer .footer-title {
-  color: #FFF;
+  color: #525151;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
   margin: 0px 0px 30px;
 }
 
@@ -1991,18 +1991,18 @@ textarea.input {
 }
 
 .footer-links li a {
-  color: #B9BABC;
+  color: #525151;
 }
 
 .footer-links li i {
   margin-right: 15px;
-  color: #D10024;
+  color: #ffffff;
   width: 14px;
   text-align: center;
 }
 
 .footer-links li a:hover {
-  color: #D10024;
+  color: #ffffff;
 }
 
 .copyright {
@@ -2017,7 +2017,7 @@ textarea.input {
 }
 
 .footer-payments li a {
-  color: #15161D;
+  color: #000000;
   font-size: 36px;
   display: block;
 }
@@ -2088,7 +2088,7 @@ textarea.input {
 }
 
 .slick-dots li.slick-active button:before {
-  background-color: #D10024;
+  background-color: #d10024;
 }
 
 .custom-dots .slick-dots {

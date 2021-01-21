@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -15,8 +15,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import {GoogleLoginProvider,FacebookLoginProvider} from 'angularx-social-login';
+import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
+import { RouterModule } from '@angular/router';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 
 @NgModule({
@@ -29,10 +30,15 @@ import {GoogleLoginProvider,FacebookLoginProvider} from 'angularx-social-login';
     SavelistComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    CategoriesComponent
+   
   ],
   imports: [
     BrowserModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
@@ -43,7 +49,7 @@ import {GoogleLoginProvider,FacebookLoginProvider} from 'angularx-social-login';
     
 
   ],
-  providers: [{
+  providers: [ {
     provide: 'SocialAuthServiceConfig',
     useValue: {
       autoLogin: false,
@@ -51,9 +57,8 @@ import {GoogleLoginProvider,FacebookLoginProvider} from 'angularx-social-login';
         {
           id: GoogleLoginProvider.PROVIDER_ID,
           provider: new GoogleLoginProvider(
-            ''
-          )
-        }
+            '699412575101-k4g4e2rrs4dd23lf48rj7t979d016oe2.apps.googleusercontent.com'
+          )}
       ]
     } as SocialAuthServiceConfig,
   }],

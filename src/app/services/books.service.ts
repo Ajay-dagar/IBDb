@@ -21,8 +21,8 @@ export class BooksService {
     return this.http.get<BookModelServer>(this.url + '/books/' + id);////localhost:3000/api/books/id
   }
 
-
-  getBooksFromCategory(catName: String): Observable<BookModelServer[]> {
-    return this.http.get<BookModelServer[]>(this.url + 'books/category/' + catName);
+  
+  getbookbyname(name: string): Observable<BookModelServer> {
+    return this.http.get<BookModelServer>(this.url + '/books/n/' + name);////localhost:3000/api/books/n/name
   }
 } 

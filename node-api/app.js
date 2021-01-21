@@ -4,13 +4,13 @@ const cookieParser = require('cookie-parser');
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 const logger = require('morgan');
-const app = express();
 const cors = require('cors');
-
-app.use(cors());
 const bodyParser = require('body-parser');
+const app = express();
+app.use(cors());
 
-app.use(bodyParser.urlencoded({ extended: true }));
+
+//app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(logger('combined'));
 app.use(express.json());
@@ -22,11 +22,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 const booksRouter = require('./routes/books');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
+const categoriesRouter = require('./routes/categories');
 //use routes
 app.use('/api/users', usersRouter);
 app.use('/api/books', booksRouter);
 app.use('/api/auth', authRouter);
-
+app.use('/api/categories', categoriesRouter);
 /*app.use(cors({
     origin: '*',
     methods: ['GET', 'PUT', 'DELETE', 'PATCH', 'POST'],

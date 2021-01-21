@@ -18,12 +18,11 @@ export class RegisterComponent implements OnInit {
   registrationMessage: string;
   constructor(private fb: FormBuilder,
     private checkEmailService: CheckEmailService,
-    private userService: UserService) { 
+    private userService: UserService) {
       this.registrationForm = fb.group({
         fname: ['', [Validators.required, Validators.minLength(4)]],
         lname: ['', [Validators.required, Validators.minLength(4)]],
-        email: ['', [Validators.required, Validators.pattern(this.emailPattern)],
-          [this.checkEmailService.emailValidate()]
+        email: ['', [Validators.required, Validators.pattern(this.emailPattern)]
         ],
         password: ['', [Validators.required, Validators.minLength(6)]],
         confirmPassword: ['', [Validators.required, Validators.minLength(6)]],

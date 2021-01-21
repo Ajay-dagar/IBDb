@@ -4,43 +4,16 @@
     <div class="container">
       <!-- row -->
       <div class="row">
-        <!-- shop -->
-        <div class="col-md-4 col-xs-6">
+       <!-- shop -->
+        <div class="col-md-4 col-xs-6" *ngFor="let c of categories">
           <div class="shop">
             <div class="shop-img">
-              <img src="./../../../assets/img/read01.png" alt="">
+              <img [src]="c.image" alt="{{c.category}}" (click)="selectCategory(c.category)">
+                 
             </div>
             <div class="shop-body">
-              <h3>Fiction<br></h3>
-              <a href="#" class="cta-btn">Read now <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- /shop -->
-  
-        <!-- shop -->
-        <div class="col-md-4 col-xs-6">
-          <div class="shop">
-            <div class="shop-img">
-              <img src="./../../../assets/img/read02.png" alt="">
-            </div>
-            <div class="shop-body">
-              <h3>Fantasy<br></h3>
-              <a href="#" class="cta-btn">Read now <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- /shop -->
-  
-        <!-- shop -->
-        <div class="col-md-4 col-xs-6">
-          <div class="shop">
-            <div class="shop-img">
-              <img src="./../../../assets/img/read03.png" alt="">
-            </div>
-            <div class="shop-body">
-              <h3>Thriller<br></h3>
-              <a href="#" class="cta-btn">Read now <i class="fa fa-arrow-circle-right"></i></a>
+              <h3 (click)="selectCategory(c.category)">{{c.category}}<br></h3>
+              <a class="cta-btn" (click)="selectCategory(c.category)"> <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
@@ -51,14 +24,14 @@
     <!-- /container -->
   </div>
   <!-- /SECTION -->
-  
+
   <!-- SECTION -->
   <div class="section">
     <!-- container -->
     <div class="container">
       <!-- row -->
       <div class="row">
-  
+
         <!-- section title -->
         <div class="col-md-12">
           <div class="section-title">
@@ -66,22 +39,22 @@
           </div>
         </div>
         <!-- /section title -->
-        <div class="col-md-12"> 
+        <div class="col-md-12">
             <div class="row">
-              <div class="col-md-4 col-sm-6" *ngFor="let p of books">
+              <div class="col-md-2 col-sm-6" *ngFor="let p of books">
                 <div class="card my-2">
-                  <img [src]="p.image" alt="{{p.name}}" height="450" width="200px" class="card-img-top" style="cursor:pointer;" (click)="selectBook(p.id)" >
+                  <img [src]="p.image" alt="{{p.name}}" height="250" width="100" class="card-img-top" style="cursor:pointer;" (click)="selectBook(p.id)" >
                   <div class="card-header">
                     <div class="card-title">
                       <p>{{p.name| titlecase}}</p>
                     </div>
                   </div>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
 
-        <!-- Products tab & slick -->  
+        <!-- Products tab & slick -->
        <!-- <div class="col-md-12">
           <div class="row">
             <div class="col-md-4 col-sm-6" *ngFor="let p of books">
@@ -95,8 +68,8 @@
                 <div class="card-body">
                   <h6>{{p.description.substr(0, 40)}} ....</h6>
                   <p class="lead">{{p.price | currency:'INR'}}</p>
-                </div> 
-  
+                </div>
+
                 <div class="row d-flex justify-content-center border-primary my-3">
                   <div class="col-md-6 ">
                     <button class="btn btn-outline-primary btn-sm btn-block"
@@ -104,25 +77,25 @@
                             [class.btn-outline-danger]="p.quantity < 1"
                             (click)="AddProduct(p.id)" [disabled]="p.quantity < 1">
                       {{ p.quantity < 1 ? "NO STOCK" : "Add To Cart"}}
-                    </button> 
+                    </button>
                   </div>
-                </div> 
-  
+                </div>
+
               </div>
-  
+
             </div>
-  
+
           </div>
-  
+
         </div> -->
       </div>
     </div>
-  
+
   </div>
   <!-- /container -->
-  
+
   <!-- /SECTION -->
-  
+
   <!-- HOT DEAL SECTION -->
   <div id="hot-deal" class="section">
     <!-- container -->
@@ -131,8 +104,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="hot-deal">
-         
-          
+
+
             <a class="primary-btn cta-btn" href="#">Read now</a>
           </div>
         </div>
@@ -142,8 +115,8 @@
     <!-- /container -->
   </div>
   <!-- /HOT DEAL SECTION -->
-  
-  
+
+
   <!-- NEWSLETTER -->
   <div id="newsletter" class="section">
     <!-- container -->
@@ -174,4 +147,3 @@
     <!-- /container -->
   </div>
   <!-- /NEWSLETTER -->
-  

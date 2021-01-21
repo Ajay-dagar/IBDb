@@ -11,29 +11,33 @@ import { ResponseModel, UserService } from 'src/app/services/user.service';
 })
 export class ProfileComponent implements OnInit {
   myUser: any;
+
+
   constructor(private authService: SocialAuthService,
-    private userService: UserService,
-    private router: Router) { }
+              private userService: UserService,
+              private router: Router) {
+  }
 
   ngOnInit(): void {
     this.userService.userData$
-    .pipe(
-      map((user: SocialUser | ResponseModel) => {
-        if (user instanceof SocialUser || user.type === 'social') {
-          return {
-            ...user,
-            email: 'test@test.com',
+      .pipe(
+        map((user: SocialUser | ResponseModel) => {
+          if (user instanceof SocialUser || user.type === 'social') {
+            return {
+              ...user,
+              email: 'test@test.com',
 
-          };
-        } else {
-          return user;
-        }
-      })
-    )
-    .subscribe((data: ResponseModel | SocialUser) => {
-      this.myUser = data;
-    });
+            };
+          } else {
+            return user;
+          }
+        })
+      )
+      .subscribe((data: ResponseModel | SocialUser) => {
+        this.myUser = data;
+      });
   }
+
   logout() {
     this.userService.logout();
   }

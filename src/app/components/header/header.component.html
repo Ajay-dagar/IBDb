@@ -4,7 +4,7 @@
     <!-- TOP HEADER -->
     <div id="top-header">
       <div class="container">
-       
+
         <ul class="header-links pull-right">
           <li><a href="/profile"><i class="fa fa-user-o"></i>{{authState === false ? 'LOGIN' : 'My Account'}}</a></li>
           <li *ngIf="!authState"><a routerLink="/register"><i class="fa fa-user-plus"></i> REGISTER</a></li>
@@ -13,7 +13,7 @@
       </div>
     </div>
     <!-- /TOP HEADER -->
-  
+
     <!-- MAIN HEADER -->
     <div id="header">
       <!-- container -->
@@ -24,32 +24,23 @@
           <div class="col-md-3">
             <div class="header-logo">
               <a routerLink="/" class="logo">
-                <img src="../../../assets/img/logo.png" alt=""width="140" height="100">
+                <img src="../../../assets/img/logo.png" alt="70px" width="170px" height="70px">
               </a>
             </div>
           </div>
           <!-- /LOGO -->
-  
+
           <!-- SEARCH BAR -->
           <div class="col-md-6">
             <div class="header-search">
               <form>
-                <select class="input-select">
-                  <option value="0">Categories</option>
-                  <option value="1">Fantasy</option>
-                  <option value="2">Ebook</option>
-                  <option value="3">Horror</option>
-                  <option value="4">Romance</option>
-                  <option value="5">Thriller</option>
-                  <option value="2">Fiction</option>
-                </select>
                 <input class="input" placeholder="Search...">
                 <button class="search-btn">Search</button>
               </form>
             </div>
           </div>
           <!-- /SEARCH BAR -->
-  
+
           <!-- ACCOUNT -->
           <div class="col-md-3 clearfix">
             <div class="header-ctn">
@@ -62,8 +53,8 @@
                 </a>
               </div>
               <!-- /Wishlist -->
-  
-              <!-- Cart 
+
+              <!-- Cart
               <div class="dropdown" >
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="cursor: pointer;">
                   <i class="fa fa-shopping-cart"></i>
@@ -82,8 +73,8 @@
                       </div>
                       <button class="delete" (click)="cartService.DeleteProductFromCart(i)"><i class="fa fa-close"></i></button>
                     </div>
-  
-  
+
+
                   </div>
                   <div class="cart-summary">
                     <small>{{cartData.data[0].numInCart !== 0 ? cartData.data.length : 0}} Item(s) selected</small>
@@ -96,7 +87,7 @@
                 </div>
               </div>
               /Cart -->
-  
+
               <!-- Menu Toogle -->
               <div class="menu-toggle">
                 <a href="#">
@@ -116,7 +107,7 @@
     <!-- /MAIN HEADER -->
   </header>
   <!-- /HEADER -->
-  
+
   <!-- NAVIGATION -->
   <nav id="navigation">
     <!-- container -->
@@ -127,9 +118,9 @@
         <ul class="main-nav nav py-3">
           <li class="active"><a href="/">Home</a></li>
           <li><a href="#">Categories</a></li>
-         
+
           <li><a href="#">Contact Us</a></li>
-  
+
         </ul>
         <!-- /NAV -->
       </div>
@@ -138,5 +129,5 @@
     <!-- /container -->
   </nav>
   <!-- /NAVIGATION -->
-  
+
 
