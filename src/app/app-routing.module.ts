@@ -8,6 +8,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SavelistComponent } from './components/savelist/savelist.component';
 import { ProfileGuard } from './guard/profile.guard';
+import { NewComponent } from './new/new.component';
+import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
   {
@@ -30,7 +32,13 @@ const routes: Routes = [
   },
   {
     path:'categories/:category' ,component:CategoriesComponent
-  }
+  },
+  {
+    path:'view' ,component:ViewComponent
+  },
+   {
+      path: "new/:product", component: NewComponent
+   }
 ];
 
 @NgModule({
