@@ -11,9 +11,9 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class CategoriesComponent implements OnInit {
   category:string;
-  categories:CategoryModelServer[]=[];;
-  
-  
+  categories:CategoryModelServer[]=[];
+
+
   constructor(private categoryservice: CategoriesService,private route:ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {this.route.paramMap.pipe(map((param: ParamMap)=>{
@@ -25,7 +25,7 @@ export class CategoriesComponent implements OnInit {
     this.categories=book.books;
   });
 });
-} 
+}
 selectBook(id:Number)
 {
   this.router.navigate(['/books',id]).then();

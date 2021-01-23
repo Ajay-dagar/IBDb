@@ -70,14 +70,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #000000;
+  color: #2B2D42;
   font-weight: 500;
   -webkit-transition: 0.2s color;
   transition: 0.2s color;
 }
 
 a:hover, a:focus {
-  color: #D10024;
+  color: #ffffff;
   text-decoration: none;
   outline: none;
 }
@@ -1342,21 +1342,7 @@ textarea.input {
   margin-bottom: 15px;
   color: #ffffff;
 }
-/*
-.product-details .product-price .product-old-price {
-  font-size: 70%;
-  font-weight: 400;
-  color: #8D99AE;
-}
 
-.product-details .product-available {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-left: 30px;
-  color: #D10024;
-}
-*/
 .product-details .product-options {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -1373,63 +1359,7 @@ textarea.input {
 .product-details .product-options .input-select {
   width: 90px;
 }
-/*
-.product-details .add-to-cart {
-  margin-bottom: 30px;
-}
 
-.product-details .add-to-cart .add-to-cart-btn {
-  position: relative;
-  border: 2px solid transparent;
-  height: 40px;
-  padding: 0 30px;
-  background-color: #ef233c;
-  color: #FFF;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 40px;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-}
-
-.product-details .add-to-cart .add-to-cart-btn>i {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  line-height: 38px;
-  color: #D10024;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.product-details .add-to-cart .add-to-cart-btn:hover {
-  background-color: #FFF;
-  color: #D10024;
-  border-color: #D10024;
-  padding: 0px 30px 0px 50px;
-}
-
-.product-details .add-to-cart .add-to-cart-btn:hover>i {
-  opacity: 1;
-  visibility: visible;
-}
-
-.product-details .add-to-cart .qty-label {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
-  margin-right: 15px;
-  margin-bottom: 0px;
-}
-
-.product-details .add-to-cart .qty-label .input-number {
-  width: 90px;
-  display: inline-block;
-}
-*/
 .product-details .product-btns li {
   display: inline-block;
   text-transform: uppercase;
