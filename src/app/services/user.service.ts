@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService { 
+export class UserService {
   auth = false;
   private SERVER_URL = environment.serverURL;
   private user;
@@ -36,11 +36,11 @@ export class UserService {
 
     this.httpClient.post(`${this.SERVER_URL}/auth/login`,{email, password})
       .subscribe((data: ResponseModel) => {
-       
+
           this.auth = data.auth;
           this.authState$.next(this.auth);
           this.userData$.next(data);
-        
+
       });
 
   }
@@ -56,16 +56,16 @@ export class UserService {
     this.authState$.next(this.auth);
   }
 
-  registerUser(formData: any, photoUrl?: string, typeOfUser?: string): Observable<{ message: string }> {
+  registerUser(formData: any /*, photoUrl?: string, typeOfUser?: string*/): Observable<{ message: string }> {
     const {fname, lname, email, password} = formData;
     console.log(formData);
     return this.httpClient.post<{ message: string }>(`${this.SERVER_URL}/auth/register`, {
       email,
       lname,
       fname,
-      typeOfUser,
-      password,
-      photoUrl: photoUrl || null
+     // typeOfUser,
+      password
+     // photoUrl: photoUrl || null
     });
   }
 }
@@ -81,5 +81,5 @@ export interface ResponseModel {
   userId: number;
   type: string;
   role: number;
- 
+
 }

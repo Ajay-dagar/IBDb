@@ -18,6 +18,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
 import { RouterModule } from '@angular/router';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { ViewComponent } from './view/view.component';
+import { NewComponent } from './new/new.component';
 
 
 @NgModule({
@@ -31,8 +33,10 @@ import { CategoriesComponent } from './components/categories/categories.componen
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    CategoriesComponent
-   
+    CategoriesComponent,
+    ViewComponent,
+    NewComponent
+
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     SocialLoginModule
-    
+
 
   ],
   providers: [ {
