@@ -5,7 +5,6 @@ const helper = require('../config/helpers');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-
 // LOGIN ROUTE
 router.post('/login', [helper.hasAuthFields, helper.isPasswordAndUserMatch], (req, res) => {
     let token = jwt.sign({state: 'true', email: req.body.email, username: req.body.username}, helper.secret, {

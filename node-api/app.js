@@ -1,17 +1,11 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const swaggerJSDoc = require('swagger-jsdoc');
-const swaggerUI = require('swagger-ui-express');
 const logger = require('morgan');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const app = express();
+
 app.use(cors());
-
-
-//app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(logger('combined'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -28,12 +22,6 @@ app.use('/api/users', usersRouter);
 app.use('/api/books', booksRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/categories', categoriesRouter);
-/*app.use(cors({
-    origin: '*',
-    methods: ['GET', 'PUT', 'DELETE', 'PATCH', 'POST'],
-    allowedHeaders: 'Content-Type, Authorization, Origin, X-Requested-With, Accept'
-})); */
-
 
 module.exports = app;
 
@@ -63,11 +51,11 @@ app.use(cors());
 
 app.post("/books",function(req,res)
 {
-  
+
     var fromnodejstoang ={};
     fromnodejstoang.result=[];
     console.log("did we read parameter" + req.body.id);
-    
+
 
 
 var params=[]; // filling of question marks
@@ -100,10 +88,10 @@ con.query(sql,params,function(err,sel){
         fromnodejstoang.result=sel;
         console.log("outut is" +JSON.stringify(fromnodejstoang) );
         res.send(JSON.stringify(fromnodejstoang));
-    }  
+    }
 
 
-       con.destroy();   
+       con.destroy();
 });
 
 });
