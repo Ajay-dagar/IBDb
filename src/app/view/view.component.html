@@ -3,6 +3,7 @@
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-12 col-md-12 col-sm-12">
           <h1>Search to know more about your favourite books</h1>
+          <h1>...</h1>
           <input
             [formControl]="queryField"
             id="keyword"
@@ -15,7 +16,7 @@
       </div>
     </div>
   </div>
-  
+
   <div *ngIf="loading" class="container-fluid mt-4">
     <div class="container">
       <div class="row justify-content-start align-items-start mb-5">
@@ -45,12 +46,8 @@
                   alt=""
                 />
               </div>
-              <div *ngFor="let aut of product.volumeInfo.authors">
-                <span> Authors: {{ aut }}</span>
-              </div>
+              <div *ngFor="let aut of product.volumeInfo.authors"></div>
               <div class="details">
-                <span>Title: {{ product.volumeInfo.title }}</span> <br />
-                <br />
                 <a [routerLink]="['/new', combineSlug(product.id)]">Details</a>
                 <a (click)="goToLink(product.volumeInfo.previewLink)">preview</a>
               </div>

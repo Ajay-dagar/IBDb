@@ -1,5 +1,5 @@
 .hero-page1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.89)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69)),
       url("../../assets/image.jpg");
     background-position: contain;
     background-repeat: no-repeat;
@@ -10,7 +10,8 @@
   }
   h1 {
     margin: 0;
-    color: rgb(251, 251, 251);
+    font-size: 30px;
+    color: rgb(255, 255, 255);
     text-align: center;
   }
   .container .row {
@@ -23,26 +24,25 @@
     margin-right: 5px;
     margin-top: 20px;
     padding: 10px;
-    box-shadow: 0 6px 6px #e6e6e6;
+    box-shadow: 0 6px 6px #000000;
     .image {
       width: 100%;
       padding: 10px;
       cursor: pointer;
-      height: 30vh;
+      height: 55vh;
       img {
         width: 100%;
         object-fit: fill;
-        height: 25vh;
+        height: 50vh;
       }
     }
     .details {
       a {
         margin-right: 100px;
-        color: rgb(0, 110, 255);
+        color: rgb(255, 255, 255);
         cursor: pointer;
         font-size: 20px;
         text-decoration: none;
       }
     }
   }
-  

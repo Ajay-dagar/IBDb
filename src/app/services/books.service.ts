@@ -6,9 +6,9 @@ import { BookModelServer } from '../model/book.model';
 
 @Injectable({
   providedIn: 'root'
-}) 
+})
 export class BooksService {
- // SERVER_URL=environment.serverURL; 
+ // SERVER_URL=environment.serverURL;
   private url = environment.serverURL;
   constructor(private http:HttpClient) { }
   /* fetch data from db*/
@@ -21,8 +21,8 @@ export class BooksService {
     return this.http.get<BookModelServer>(this.url + '/books/' + id);////localhost:3000/api/books/id
   }
 
-  
+/*
   getbookbyname(name: string): Observable<BookModelServer> {
     return this.http.get<BookModelServer>(this.url + '/books/n/' + name);////localhost:3000/api/books/n/name
-  }
-} 
+  }*/
+}
